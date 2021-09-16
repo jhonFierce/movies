@@ -1,0 +1,21 @@
+div.movieCard {
+    box-shadow: 0 0 11px 0 rgba(50,50,50,.75);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.imageWrapper {
+    width: 320px;
+    height: 400px;
+    background-color: #1b3039;
+    border-radius: 12px;
+    text-align: center;
+    justify-self: center;
+  }
+
+  div.imageWrapper img {
+      height: 100%;
+      border-radius: 12px;
+  }
