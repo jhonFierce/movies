@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## Comentarios
+
+No me dio tiempo de implementar las funcionalidades y la responsividad, me hice lio con el TypeScript y estudiando las pruebas unitarias, hasta ahora no he dado con como usarlas de manera practica y efectiva.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
