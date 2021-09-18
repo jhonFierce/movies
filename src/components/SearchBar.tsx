@@ -7,9 +7,7 @@ export default class SearchBar extends Component {
       }
 
       changeSearchBy = (e: any) => {
-          this.setState({'searchByOption':e.target.value});
-          console.log(this.state.searchByOption);
-          
+          this.setState({'searchByOption':e.target.value});      
       }
 
     render() {

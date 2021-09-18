@@ -7,7 +7,7 @@ import moviedata from '../data/moviedata.json';
 test('renders content', () => {
     const movies = moviedata;
     movies.forEach(movie => {
-        const component = render(<MovieCard data={movie} />);
+        const component = render(<MovieCard movie={movie} />);
         
     });
 });

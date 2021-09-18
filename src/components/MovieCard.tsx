@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
 import './MovieCardStyles.css';
 import moment from 'moment';
+import Movie from '../interfaces/Movie';
 
-/* Manually deduced movie interface, create an automated-test. */
-interface Props {
-    data: {
-        year: number;
-        title: string;
-        info: {
-            directors?: string[];
-            release_date?: string;
-            rating?: number;
-            genres?: string[];
-            image_url?: string;
-            plot?: string;
-            rank?: number;
-            running_time_secs?: number;
-            actors?: string[];
-        }
-    }
+type Props = {
+    movie : Movie
 }
-
 export default class MovieCard extends Component<Props> {
-    movie = this.props.data
+    movie = this.props.movie;
 
     twoplustwo = () => 2 + 2;
 
     render() {
         return (
             <div className="movieCard">
-                {console.log(this.movie)}
                 <div className="imageWrapper">
                 {
                     /* Check if have the image link and also need https to be able to load the image */

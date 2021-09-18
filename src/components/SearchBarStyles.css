@@ -1,14 +1,16 @@
 div#searchBar {
     background-color: #1b3039;
+    padding: 0 90px 0 90px;
 }
 
 div#searchBar h1 {
-    padding: 0 90px 0 90px;
+    
 }
 
 div#searchBar fieldset {
     border: none;
-    padding: 0 90px 0 90px;
+    padding: 0;
+    margin: 0;
 }
 
 div#searchBar > fieldset span, label {
@@ -16,7 +18,6 @@ div#searchBar > fieldset span, label {
 }
 
 div#searchBar p#rangeFields {
-    padding: 0 90px 0 90px;
 }
 
 div#searchBar p#rangeFields > label, input, span {

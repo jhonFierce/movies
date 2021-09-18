@@ -4,6 +4,7 @@ div.movieCard {
     padding: 12px;
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
 }
 
 div.imageWrapper {

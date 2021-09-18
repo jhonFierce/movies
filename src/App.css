@@ -1,7 +1,15 @@
 div#movieCards {
-  padding: 0 90px 0 90px;
+  margin: 0 90px 0 90px;
   display: grid;
-  gap: 5rem;
-  grid-template-columns: repeat(3,1fr);
   color: rgb(255 255 255 / .79);
+}
+
+div.movieCards-sm {
+  grid-template-columns: repeat(1,1fr);
+  gap: 5rem;
+}
+
+div.movieCards-lg {
+  grid-template-columns: repeat(3,1fr);
+  gap: 5rem;
 }

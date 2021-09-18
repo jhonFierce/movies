@@ -1,10 +1,10 @@
-/* maintain consistency across browsers */
-@import-normalize;
+/* maintain consistency across browsers, 
+ added to index.tsx because the css format does not support import by default.
+ @import-normalize; */
 
 body {
   background-color: #455a64;
   color: rgb(255 255 255 / .70);
-  margin: 0;
 }
 
 body h1 {
