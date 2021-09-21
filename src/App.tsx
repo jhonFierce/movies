@@ -20,10 +20,22 @@ export default class App extends Component {
   constructor(props:{}) {
     super(props);
     // No llames this.setState() aquí!
+    /* due the movies are not indexed, it will be done manually */ 
     this.state = { 
-      movies: moviedata,
+      movies: moviedata.map((movie, index) => { 
+        let tempMovie:any;
+        tempMovie = movie; 
+        tempMovie.id = index;
+        if(!movie.hasOwnProperty('favorite'))
+        tempMovie = {...movie,favorite:false};
+        else
+        tempMovie = {...movie};
+
+        return tempMovie; 
+      } ),
       w_size: ''
     };
+    console.log(this.state.movies);
   }
 
   componentDidMount() {
@@ -39,8 +51,8 @@ export default class App extends Component {
         <SearchBar />
         <div id="movieCards" className={`movieCards-${this.state.w_size}`}>
         {
-          this.state.movies.filter((movie, index) => index >= 0 && index < 6).map((movie, index) =>
-          <MovieCard movie={movie} key={`movie-${index}`} />)
+          this.state.movies.filter(movie => movie.id >= 0 && movie.id < 6).map(movie =>
+          <MovieCard movie={movie} key={`movie-${movie.id}`} />)
         }
         </div>
       </Fragment>

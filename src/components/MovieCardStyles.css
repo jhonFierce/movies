@@ -1,7 +1,7 @@
 div.movieCard {
     box-shadow: 0 0 11px 0 rgba(50,50,50,.75);
     border-radius: 12px;
-    padding: 12px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
     margin-top: 24px;
@@ -13,10 +13,28 @@ div.imageWrapper {
     background-color: #1b3039;
     border-radius: 12px;
     text-align: center;
-    justify-self: center;
+    align-self: center;
   }
 
   div.imageWrapper img {
       height: 100%;
       border-radius: 12px;
+  }
+
+  div.info-wrapper {
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 24px;
+  }
+
+  button.btn-favorite-false {
+      align-self: end;
+  }
+
+
+  button.btn-favorite-true {
+      align-self: end;
+      background-color: yellow;
+
   }

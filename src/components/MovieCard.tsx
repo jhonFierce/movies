@@ -8,12 +8,14 @@ type Props = {
 }
 export default class MovieCard extends Component<Props> {
     movie = this.props.movie;
-
-    twoplustwo = () => 2 + 2;
+    changeFavorite = () => {
+        console.log(this.movie.id);
+    }
 
     render() {
         return (
             <div className="movieCard">
+                <button className={`btn-favorite-${this.movie.favorite}`} onClick={this.changeFavorite}>Favorite</button>
                 <div className="imageWrapper">
                 {
                     /* Check if have the image link and also need https to be able to load the image */
@@ -24,6 +26,7 @@ export default class MovieCard extends Component<Props> {
                         />
                 }
                 </div>
+                <div className="info-wrapper">
                 <p>Title: {this.movie.title}</p>
                 <p>Year: {this.movie.year}</p>
                 {
@@ -34,11 +37,12 @@ export default class MovieCard extends Component<Props> {
                     this.movie.info.genres &&
                     <p>Genres: {this.movie.info.genres.reduce((str, genre) => str += `${genre}, `, '').slice(0, -2)}</p>
                 }
-                <p>Plot: {(this.movie.info.plot && this.movie.info.plot) || 'not available'}</p>
-                <p>Rank: {(this.movie.info.rank && this.movie.info.rank) || 'not available'}</p>
-                <p>Rating: {(this.movie.info.rating && this.movie.info.rating) || 'not available'}</p>
-                <p>Release Date: {(this.movie.info.release_date && moment(this.movie.info.release_date).format('YYYY-MM-DD')) || 'not available'}</p>
-                <p>Duration: {(this.movie.info.running_time_secs && `${this.movie.info.running_time_secs/60} mins`) || 'not available'} </p>
+                    <p>Plot: {(this.movie.info.plot && this.movie.info.plot) || 'not available'}</p>
+                    <p>Rank: {(this.movie.info.rank && this.movie.info.rank) || 'not available'}</p>
+                    <p>Rating: {(this.movie.info.rating && this.movie.info.rating) || 'not available'}</p>
+                    <p>Release Date: {(this.movie.info.release_date && moment(this.movie.info.release_date).format('YYYY-MM-DD')) || 'not available'}</p>
+                    <p>Duration: {(this.movie.info.running_time_secs && `${this.movie.info.running_time_secs / 60} mins`) || 'not available'} </p>
+                </div>
             </div>
         )
     }

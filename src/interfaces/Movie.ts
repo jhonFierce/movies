@@ -2,6 +2,8 @@
 interface Movie {
     year: number;
     title: string;
+    id: number;
+    favorite: boolean;
     info: {
         directors?: string[];
         release_date?: string;
