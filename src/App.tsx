@@ -23,14 +23,9 @@ export default class App extends Component {
     /* due the movies are not indexed, it will be done manually */ 
     this.state = { 
       movies: moviedata.map((movie, index) => { 
-        let tempMovie:any;
-        tempMovie = movie; 
+        let tempMovie = new Movie();
         tempMovie.id = index;
-        if(!movie.hasOwnProperty('favorite'))
-        tempMovie = {...movie,favorite:false};
-        else
-        tempMovie = {...movie};
-
+        Object.assign(tempMovie, movie);
         return tempMovie; 
       } ),
       w_size: ''
